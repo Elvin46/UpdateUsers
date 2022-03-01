@@ -1,0 +1,36 @@
+﻿@model Expert;
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="row">
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Default form</h4>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Fullname">Fullname</label>
+                    <input  class="form-control"  placeholder="Title" value="@Model.Fullname" asp-for="Fullname">
+                    <span asp-validation-for="Fullname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Field">Field</label>
+                    <input class="form-control"  placeholder="Subtitle" asp-for="Field" value="@Model.Field">
+                    <span asp-validation-for="Field" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Photo">Photo</label>
+                    <input class="form-control"  placeholder="Image" asp-for="Photo" accept="image/*">
+                    <span asp-validation-for="Photo" class="text-danger"></span>
+                    <img class="mt-2" src="~/img/@Model.Image" style="height:100px; width:100px;"/>
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <a class="btn btn-light" asp-action="Index">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+

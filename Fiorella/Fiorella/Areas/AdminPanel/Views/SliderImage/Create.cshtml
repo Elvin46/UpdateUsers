@@ -1,0 +1,28 @@
+﻿@model SliderImage;
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Default form</h4>
+            <p class="card-description">
+            Basic form layout
+            </p>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Photos">Photos</label>
+                    <input class="form-control"  placeholder="Image" asp-for="Photos" accept="image/*">
+                    <span asp-validation-for="Photos" class="text-danger"></span>
+
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <a class="btn btn-light" asp-action="Index">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+

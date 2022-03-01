@@ -1,0 +1,23 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row">
+    <div class="col-md-6 d-flex align-items-stretch">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">@Model.Title</h4>
+                        <p>
+                        @Model.Subtitle
+                        </p>
+                        <h5>@Model.Date</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
